@@ -1,0 +1,6 @@
+PROCEDURE newtonLaw(m, a)
+f <- m * a
+RETURN f
+END PROCEDURE
+
+newtonLaw(600,2)

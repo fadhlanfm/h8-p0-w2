@@ -1,0 +1,11 @@
+PROCEDURE periksaKuku(sekumpulanSiswa[siswa_1 .. siswa_40])
+    count = 0
+    WHILE count < sekumpulanSiswa.length
+        IF siswa_n = 'kuku panjang' THEN
+            DO hukum(siswa_n)
+        ELSE
+            DO puji(siswa_n)
+        END IF
+        ADD 1 to count
+    END WHILE
+END PROCEDURE
