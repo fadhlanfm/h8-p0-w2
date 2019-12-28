@@ -32,7 +32,22 @@
 
 function mostCarsByState (cars) {
   //code below here
-};
+  var output = [];
+  var uniqueCars = cars.reduce(function(a,b){if(a.indexOf(b)<0)a.push(b);return a;},[]);
+  
+  for(i=0;i<uniqueCars.length;i++){
+    var counter = 0;
+    for(j=0;j<cars.length;j++){
+      if(uniqueCars[i]==cars[j]){
+        counter++;
+      }
+    }
+    output.push([]);
+    output[i][0]=uniqueCars[i];
+    output[i][1]=counter/cars.length;
+  }
+  return output;
+}
 
 console.log(mostCarsByState(['B', 'D', 'B', 'B', 'A', 'C', 'D']));
 /*
