@@ -33,6 +33,9 @@ function partialCheck(str, partial) {
       counter = counter + 1;
     }
   }
+  if(counter==0){
+    counter = 'not found';
+  }
   return counter;    
 }
 console.log(partialCheck('abcdcabdabc', 'abc')); // found 2 times
