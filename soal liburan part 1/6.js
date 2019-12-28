@@ -23,7 +23,17 @@ RULES:
  - DILARANG MENGGUNAKAN REGEX
 */
 function partialCheck(str, partial) {
-  //your code here    
+  //your code here
+  var str = str.toUpperCase();
+  var partial = partial.toUpperCase();
+
+  var counter = 0;
+  for(i=0;i<str.length-2;i++){
+    if(str[i]==partial[0] && str[i+1]==partial[1] && str[i+2]==partial[2]){
+      counter = counter + 1;
+    }
+  }
+  return counter;    
 }
 console.log(partialCheck('abcdcabdabc', 'abc')); // found 2 times
 console.log(partialCheck('zachariah', 'ach')); // found 1 time
