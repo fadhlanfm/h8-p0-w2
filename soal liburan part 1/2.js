@@ -27,6 +27,21 @@
 
 */
 
+//insertion sort
+function sort(nums){
+  for (i = 1; i < nums.length; i++) {
+    var j = i - 1;
+    var tmp = nums[i];
+    while (j >= 0 && nums[j] > tmp) {
+      nums[j + 1] = nums[j];
+      j--;
+    }
+    nums[j+1] = tmp;
+  }
+  return nums;
+}
+
+/*
 function sortByCol(arr, colIndex){
   arr.sort(sortFunction)
   function sortFunction(a, b) {
@@ -35,6 +50,7 @@ function sortByCol(arr, colIndex){
       return (a === b) ? 0 : (a < b) ? -1 : 1
   }
 }
+*/
 
 function winner (cars, totalKM) {
   //code below here
@@ -49,11 +65,21 @@ function winner (cars, totalKM) {
       }
     }
   }
+
+  sort(butuhWaktu);
+  /*
   sortByCol(butuhWaktu, 0);
   for (var i = 0; i < butuhWaktu.length; i++) {
     butuhWaktu[i].splice(0, 1);
   }
-  return butuhWaktu;
+  */
+
+  var result = [];
+  for(i=0;i<butuhWaktu.length;i++){
+    result.push(butuhWaktu[i][1]);
+  }
+  
+  return result;
 }
 
 console.log(winner([['B 1171 BA', 100, 200], ['B 1172 BA', 200, 0], ['B 1173 BA', 98, 220], ['B 1174 BA', 80, 400]], 450));
