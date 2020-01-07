@@ -27,16 +27,31 @@ function partialCheck(str, partial) {
   var str = str.toUpperCase();
   var partial = partial.toUpperCase();
 
-  var counter = 0;
-  for(i=0;i<str.length-2;i++){
+  
+  var hardCounter = 0;
+  for(i=0;i<str.length-partial.length+1;i++){
+    var counter = 0;
+    /*
     if(str[i]==partial[0] && str[i+1]==partial[1] && str[i+2]==partial[2]){
       counter = counter + 1;
     }
+    */
+   for(j=0;j<partial.length;j++){
+     if(str[i+j]==partial[j]){
+       counter = counter + 1;
+     }
+     if(counter/partial.length==1){
+      hardCounter = hardCounter + 1;
+     }
+   }
+
   }
-  if(counter==0){
-    counter = 'not found';
+
+  if(hardCounter==0){
+    hardCounter = 'not found';
   }
-  return counter;    
+  
+  return hardCounter;    
 }
 console.log(partialCheck('abcdcabdabc', 'abc')); // found 2 times
 console.log(partialCheck('zachariah', 'ach')); // found 1 time
