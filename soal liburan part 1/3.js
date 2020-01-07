@@ -30,10 +30,24 @@
 
 */
 
+function removeDuplicate(array) {
+  var seen = [];
+  var output = [];
+  var j = 0;
+  for(var i = 0; i < array.length; i++) {
+       var hold = array[i];
+       if(seen[hold] !== 1) {
+             seen[hold] = 1;
+             output[j++] = hold;
+       }
+  }
+  return output;
+}
+
 function mostCarsByState (cars) {
   //code below here
   var output = [];
-  var uniqueCars = cars.reduce(function(a,b){if(a.indexOf(b)<0)a.push(b);return a;},[]);
+  var uniqueCars = removeDuplicate(cars);
   
   for(i=0;i<uniqueCars.length;i++){
     var counter = 0;
