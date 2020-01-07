@@ -33,29 +33,91 @@ function firstArrived(cars) {
   var outputHitam = [];
   var output = [];
 
+  /*
   for(i=0;i<cars.length;i++){
     if(cars[i][1]=='kuning'){
-      outputKuning[i]=cars[i][0];
-    }else if(cars[i][1]=='merah'){
-      outputMerah[i]=cars[i][0];
-    }else if(cars[i][1]=='hitam'){
-      outputHitam[i]=cars[i][0];
-    }else{
-      return 'input salah';
+      output[i]=cars[i][0];
     }
   }
 
-  output = outputKuning.concat(outputMerah);
-  output = output.concat(outputHitam);
+  var j = i;
+  for(i=0;i<cars.length;i++){
+    if(cars[i][1]=='merah'){
+      j++;
+      output[j]=cars[i][0];
+    }
+  }
+
+  var k = j;
+  for(i=0;i<cars.length;i++){
+    if(cars[i][1]=='hitam'){
+      k++;
+      output[k]=cars[i][0];
+    }
+  }
+  */
+
+  for(i=0;i<cars.length;i++){
+    if(cars[i][1]=='kuning'){
+      outputKuning[i]=cars[i][0];
+    }
+  }
+
+  for(i=0;i<cars.length;i++){
+    if(cars[i][1]=='merah'){
+      outputMerah[i]=cars[i][0];
+    }
+  }
+
+  for(i=0;i<cars.length;i++){
+    if(cars[i][1]=='hitam'){
+      outputHitam[i]=cars[i][0];
+    }
+  }
+
+  //output = outputKuning.concat(outputMerah);
+  //output = output.concat(outputHitam);
+
+  
+  for(i=0;i<outputKuning.length;i++){
+    if(outputKuning[i]){
+      output[i]=outputKuning[i];
+    }
+  }
+
+  var j = i;
+  for(i=0;i<outputMerah.length;i++){
+    if(outputMerah[i]!=null){
+      j++;
+      output[j]=outputMerah[i];
+    }
+  }
+
+  var k = j;
+  for(i=0;i<outputHitam.length;i++){
+    if(outputHitam[i]!=null){
+      k++;
+      output[k]=outputHitam[i];
+    }
+  }
+  
 
   //delete empty element in array
+  /*
   for(i=output.length-1;i>=0;i--){
     if(!output[i]) {
        output.splice(i, 1);
     }
   }
+  */
+ var cleanOutput = [];
+  for (var i = 0; i < output.length; i++) {
+    if (output[i]) {
+      cleanOutput.push(output[i]);
+    }
+  }
 
-  return output;
+  return cleanOutput;
 }
 
 //TEST CASE
