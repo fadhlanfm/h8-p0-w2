@@ -1,6 +1,7 @@
-PROCEDURE hitungPakaian(jumlahPakaian)
-    count = 0
-    WHILE count < jumlahPakaian
+PROCEDURE hitungPakaian
+    READ jumlahPakaian AS integer
+    SET count AS 0
+    WHILE count IS LESS THAN jumlahPakaian
         ADD 1 to count
     END WHILE
     RETURN count

@@ -1,5 +1,8 @@
 PROCEDURE isKabisat(tahun)
-IF (tahun mod 4 = 0 AND tahun mod 100 != 0) OR (tahun mod 4 = 0 AND tahun mod 100 = 0 AND tahun mod 400 =0)
-    THEN RETURN true
-ELSE RETURN false
+    READ tahun AS integer
+    IF (tahun MODULO 4 IS EQUAL TO 0 AND tahun MODULO 100 IS NOT EQUAL TO 0) OR 
+    (tahun MODULO 4 IS EQUAL TO 0 AND tahun MODULO 100 IS EQUAL TO 0 AND tahun MODULO 400 IS EQUAL TO 0)
+        THEN RETURN true
+    ELSE 
+        RETURN false
 END PROCEDURE

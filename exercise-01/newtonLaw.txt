@@ -1,6 +1,4 @@
-PROCEDURE newtonLaw(m, a)
-f <- m * a
-RETURN f
+PROCEDURE newtonLaw
+    READ m, a AS integer
+    RETURN m TIMES a
 END PROCEDURE
-
-newtonLaw(600,2)

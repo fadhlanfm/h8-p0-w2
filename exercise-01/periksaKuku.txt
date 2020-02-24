@@ -1,10 +1,11 @@
 PROCEDURE periksaKuku(sekumpulanSiswa[siswa_1 .. siswa_40])
-    count = 0
-    WHILE count < sekumpulanSiswa.length
-        IF siswa_n = 'kuku panjang' THEN
-            DO hukum(siswa_n)
+    READ sekumpulanSiswa AS array of 40 integers
+    SET count AS 0
+    WHILE count IS LESS THAN total element of sekumpulanSiswa
+        IF the selected siswa of sekumpulanSiswa has 'kuku panjang' THEN
+            DO hukum the selected siswa
         ELSE
-            DO puji(siswa_n)
+            DO puji the selected siswa
         END IF
         ADD 1 to count
     END WHILE
