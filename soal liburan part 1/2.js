@@ -27,18 +27,33 @@
 
 */
 
-//insertion sort
 function sort(nums){
-  for (i = 1; i < nums.length; i++) {
-    var j = i - 1;
-    var tmp = nums[i];
-    while (j >= 0 && nums[j] > tmp) {
-      nums[j + 1] = nums[j];
-      j--;
+//insertion sort
+
+  // for (i = 1; i < nums.length; i++) {
+  //   var j = i - 1;
+  //   var tmp = nums[i];
+  //   while (j >= 0 && nums[j] > tmp) {
+  //     nums[j + 1] = nums[j];
+  //     j--;
+  //   }
+  //   nums[j+1] = tmp;
+  // }
+  // return nums;
+
+  // bubble sort
+  // console.log(nums)
+  for (let i = 0; i < nums.length; i++) {    
+    for (let j = i+1; j < nums.length; j++){
+      console.log(nums[i])
+      if (nums[i][0] > nums[j][0]){
+        let temp = nums[i]
+        nums[i] = nums[j]
+        nums[j] = temp
+      }  
     }
-    nums[j+1] = tmp;
   }
-  return nums;
+  // console.log(nums)
 }
 
 /*

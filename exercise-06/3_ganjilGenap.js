@@ -29,4 +29,3 @@ for(i=1;i<=100;i=i+9){
         console.log(i + ' : ');
     }
 }
-

@@ -78,8 +78,9 @@ function firstArrived(cars) {
   //output = outputKuning.concat(outputMerah);
   //output = output.concat(outputHitam);
 
-  
+
   for(i=0;i<outputKuning.length;i++){
+    console.log(output, '<<<<<<<<<<<<<<')
     if(outputKuning[i]){
       output[i]=outputKuning[i];
     }
@@ -94,6 +95,7 @@ function firstArrived(cars) {
   }
 
   var k = j;
+
   for(i=0;i<outputHitam.length;i++){
     if(outputHitam[i]!=null){
       k++;
@@ -117,7 +119,7 @@ function firstArrived(cars) {
     }
   }
 
-  return cleanOutput;
+  return output;
 }
 
 //TEST CASE

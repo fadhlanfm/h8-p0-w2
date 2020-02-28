@@ -1,4 +1,4 @@
-var rows1 = 5; // input the number of rows
+let rows1 = 5; // input the number of rows
 
 // do loops to display asterisks in the console.
 

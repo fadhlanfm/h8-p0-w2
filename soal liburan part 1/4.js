@@ -112,7 +112,7 @@ function getCoordinates(arr) {
     for(j=1;j<jumlahKolom;j++){
       
       if(arr[i][j]=='x'){
-        output[indexOutput]= konversiJ(j) +''+ i;
+        output[indexOutput]= arr[0][j] +''+ i;
         indexOutput++;
       }
     }

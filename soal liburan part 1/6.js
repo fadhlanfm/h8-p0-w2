@@ -22,13 +22,17 @@ RULES:
  - WAJIB MENYERTAKAN ALGORITMA/PSEUDOCODE
  - DILARANG MENGGUNAKAN REGEX
 */
+
+
+
+
 function partialCheck(str, partial) {
   //your code here
   var str = str.toUpperCase();
   var partial = partial.toUpperCase();
 
   
-  var hardCounter = 0;
+  var finalCounter = 0;
   for(i=0;i<str.length-partial.length+1;i++){
     var counter = 0;
     /*
@@ -41,17 +45,33 @@ function partialCheck(str, partial) {
        counter = counter + 1;
      }
      if(counter/partial.length==1){
-      hardCounter = hardCounter + 1;
+      finalCounter = finalCounter + 1;
      }
    }
 
   }
 
-  if(hardCounter==0){
-    hardCounter = 'not found';
+  if(finalCounter==0){
+    return 'not found';
+  } else {
+    return 'found '+ finalCounter + ' times'
   }
-  
-  return hardCounter;    
+
+  /**
+   *   
+  let counter = 0
+  for (let i = 0; i < str.length; i++) {
+    let check = ''
+    for (let j = i; j < i + partial.length; j++) {
+      check += str[j]
+      
+    }    
+    if (check === partial){
+      counter++
+    }
+  }
+  console.log(counter)
+   */
 }
 console.log(partialCheck('abcdcabdabc', 'abc')); // found 2 times
 console.log(partialCheck('zachariah', 'ach')); // found 1 time
