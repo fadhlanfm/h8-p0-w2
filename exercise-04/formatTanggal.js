@@ -1,8 +1,12 @@
 var tanggal = 1; //assign nilai variabel tanggal disini! (dengan angka antara 1 - 31)
-var bulan = 4; //assign nilai variabel bulan disini! (dengan angka antara 1 - 12)
-var tahun = 1999; //assign nilai variabel tahun disini! (dengan angka antara 1900 - 2200)
+var bulan = 11; //assign nilai variabel bulan disini! (dengan angka antara 1 - 12)
+var tahun = 2111; //assign nilai variabel tahun disini! (dengan angka antara 1900 - 2200)
 
-switch(bulan) {
+
+if(tanggal < 1 || tanggal > 31 || tanggal < 1 || tanggal > 12 || tahun < 1900 || tanggal > 2200){
+  console.log('Error, please check your input')
+}else{
+  switch(bulan) {
     case 1:
       console.log(tanggal + ' Januari ' + tahun)
       break;
@@ -41,4 +45,5 @@ switch(bulan) {
       break; 
     default:
       console.log('Error, please check your input')
+  }
 }
